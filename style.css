@@ -5,62 +5,81 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: #f5f7fb;
     color: #222;
 }
 
 header {
-    background: #6c5ce7;
+    background: #111827;
     color: white;
+    padding: 40px 20px;
     text-align: center;
-    padding: 60px 20px;
 }
 
 header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+header p {
     margin: 0;
-    font-size: 42px;
+    color: #cbd5e1;
 }
 
 main {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 0 20px;
 }
 
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.card {
+.pdf {
     background: white;
-    padding: 22px;
-    margin-bottom: 15px;
-    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 12px;
 
-    box-shadow:
-        0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.card h3 {
-    margin-top: 0;
+.pdf-name {
+    font-size: 17px;
+    font-weight: 600;
 }
 
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
+.pdf-actions {
+    display: flex;
+    gap: 8px;
+}
 
-    background: #6c5ce7;
-    color: white;
-
+.button {
     text-decoration: none;
-    border-radius: 8px;
+    padding: 9px 14px;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
 }
 
-.card a:hover {
-    background: #5849c7;
+.button.download {
+    background: #16a34a;
+}
+
+@media (max-width: 600px) {
+    .pdf {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-actions {
+        width: 100%;
+    }
+
+    .button {
+        flex: 1;
+        text-align: center;
+    }
 }
